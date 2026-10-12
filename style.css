@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-main: "Montserrat";
+    --font-heading:"PT Serif";
+    --font-main-sub: "Inter";
+
+    --primary-color: #00aeff;
+    --secondary-color: #111111;
+    --tertiary-color: #e2f2ff;
+    --gray: #b8c7d2;
+}
+
+header {
+    display: flex;
+    padding: 1.3rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(50px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .logo {
+        h3 {
+            color: var(--secondary-color);
+            font-family: var(--font-main);
+            font-size: large;
+
+            span {
+                color: var(--primary-color);
+            }
+        }
+    }
+    nav {
+        background: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        right: 0;
+        top: 60px;
+
+        width: 100%;
+        padding: 1rem;
+        display: none;
+
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: var(--font-main);
+                font-weight: 600;
+                font-size: 15px;
+            }
+            a:hover {
+                color: var(--primary-color);
+                font-size: 17px;
+            }
+        }
+    }
+    #nav.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-actions {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+
+        article {
+            p {
+                position: absolute;
+                background-color: rgb(201, 0, 0);
+                color: white;
+                width: 13px;
+
+                height: 15px;
+                border-radius: 45%;
+                align-items: center;
+                justify-content: center;
+
+                display: flex;
+                font-size: 11px;
+                top: 10px;
+                right: 60px;
+            }
+        }
+    }
+}
+
+.hero {
+    background: url(hero-bg.png);
+    background-size: cover;
+    padding: 1rem;
+    min-height: 40vh;
+    background-position: 40%;
+
+    article {
+        margin-top: 50px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        width: 60%;
+        gap: 0.1rem;
+
+        p {
+            font-family: var(--font-main);
+            font-size: xx-small;
+        }
+        h2 {
+            color: var(--secondary-color);
+            font-family: var(--font-main-sub);
+            font-size: large;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem;
+            border: none;
+
+            font-size: 10px;
+            border-radius: 0.9rem;
+            height: 30px;
+            width: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+main {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+
+    .hot-deals {
+        margin-top: 1.5rem;
+        h3 {
+            text-align: center;
+            font-family: var(--font-main);
+        }
+
+        aside {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.3rem;
+            margin-top: 0.7rem;
+
+            img {
+                width: 90%;
+            }
+            p {
+                font-size: xx-small;
+                font-family: var(--font-main-sub);
+            }
+            button {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 0.6rem;
+                border: none;
+
+                font-size: 8px;
+                border-radius: 0.9rem;
+                height: 23px;
+                width: 70px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                
+            }
+            button:hover {
+                transform: scale(1.1);
+            }
+        }   
+    }
+}
